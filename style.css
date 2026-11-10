@@ -1,11 +1,10 @@
 :root {
-    --outer-bg: #7083ab;       
-    --reading-bg: #fefdfa;     
-    --text-main: #415579;      
-    --text-muted: #5e6f8f;     
-    --accent-color: #415579;   
-    --accent-hover: #2d3c57;   
-    --track-bg: #f3f5f8;       
+    --outer-bg: #c2ddf1;       /* Your perfectly selected light, soft sky blue background */
+    --reading-bg: #fefdfa;     /* Off-white page container canvas */
+    --text-main: #415579;      /* Brand dark slate blue for headings and elements */
+    --text-muted: #5e6f8f;     /* Mid-tone blue-grey for secondary paragraphs */
+    --input-bg: #f5f8fa;       /* Very soft, clean tinted gray-blue for the input boxes */
+    --border-light: #e4ebf2;   /* Soft internal container lines */
 }
 
 body {
@@ -24,14 +23,14 @@ body {
     width: 100%;
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(65, 85, 121, 0.15);
+    box-shadow: 0 8px 30px rgba(65, 85, 121, 0.08);
     box-sizing: border-box;
 }
 
 header {
     text-align: center;
     margin-bottom: 40px;
-    border-bottom: 2px solid var(--track-bg);
+    border-bottom: 2px solid var(--input-bg);
     padding-bottom: 30px;
 }
 
@@ -43,29 +42,30 @@ header {
 }
 
 h2 {
-    font-size: 1.2rem;
-    margin-top: 40px;
+    font-size: 1.1rem;
+    margin-top: 45px;
     margin-bottom: 20px;
     color: var(--text-main);
-    border-bottom: 2px solid var(--track-bg);
+    border-bottom: 2px solid var(--input-bg);
     padding-bottom: 8px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .bio {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: var(--text-muted);
     line-height: 1.6;
 }
 
+/* Audio Track Blocks */
 .track-list {
     display: grid;
     gap: 20px;
 }
 
 .track-item {
-    background: var(--track-bg);
+    background: var(--input-bg);
     border-radius: 12px;
     padding: 20px;
     display: flex;
@@ -92,7 +92,7 @@ h2 {
     padding: 4px 10px;
     border-radius: 20px;
     font-weight: 600;
-    border: 1px solid var(--outer-bg);
+    border: 1px solid var(--border-light);
 }
 
 audio {
@@ -112,8 +112,8 @@ audio {
     padding: 8px 14px;
     border-radius: 6px;
     font-weight: 600;
-    border: 1px solid var(--accent-color);
-    color: var(--accent-color);
+    border: 1px solid var(--text-main);
+    color: var(--text-main);
     background-color: var(--reading-bg);
     transition: all 0.2s ease;
     text-align: center;
@@ -121,11 +121,11 @@ audio {
 }
 
 .btn-store:hover {
-    background: var(--accent-color);
+    background: var(--text-main);
     color: var(--reading-bg);
 }
 
-/* Flex Grid for Professional Social Badges */
+/* Social Icon Badges Container */
 .social-links {
     display: flex;
     flex-wrap: wrap;
@@ -136,26 +136,31 @@ audio {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 20px;
+    gap: 8px; /* Gap between icon and text */
+    padding: 12px 24px;
     border-radius: 30px;
-    background-color: var(--track-bg);
+    background-color: var(--input-bg);
     color: var(--text-main);
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.9rem;
-    border: 1px solid var(--outer-bg);
+    font-size: 0.95rem;
+    border: 1px solid var(--border-light);
     transition: all 0.2s ease;
     flex: 1;
     min-width: 140px;
-    text-align: center;
+}
+
+.social-badge i {
+    font-size: 1.1rem;
 }
 
 .social-badge:hover {
-    background-color: var(--accent-color);
+    background-color: var(--text-main);
     color: var(--reading-bg);
-    transform: translateY(-1px);
+    border-color: var(--text-main);
 }
 
+/* Fixed Contrast Form Layout */
 form {
     display: flex;
     flex-direction: column;
@@ -165,11 +170,20 @@ form {
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
 }
 
+label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-main);
+}
+
+/* Switched inputs to a muted tint so they pop perfectly on a white canvas */
 input, textarea {
-    background: var(--track-bg);
+    background: var(--input-bg);
     border: 1px solid transparent;
     color: var(--text-main);
     padding: 14px;
@@ -184,7 +198,7 @@ input, textarea {
 input:focus, textarea:focus {
     outline: none;
     background: var(--reading-bg);
-    border-color: var(--accent-color);
+    border-color: var(--text-main);
 }
 
 button {
@@ -202,5 +216,5 @@ button {
 }
 
 button:hover {
-    background-color: var(--accent-hover);
+    background-color: var(--text-muted);
 }
