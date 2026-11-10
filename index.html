@@ -1,58 +1,67 @@
-<!DOCTYPE html>
+<!DOCTYPEdoctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Magicka Studios</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="page-container">
+      <header>
+        <img src="images/magickalogo.png" alt="Magicka Studios Logo" class="logo" />
+        <p class="bio">
+          Premium atmospheric, orchestral, and cinematic royalty-free music
+          tailored for game developers, indie filmmakers, and digital
+          storytellers.
+        </p>
+      </header>
 
-        <header>
-            <img src="images/magickalogo.png" alt="Magicka Studios Logo" class="logo">
-            <p class="bio">Premium atmospheric, orchestral, and cinematic royalty-free music tailored for game developers, indie filmmakers, and digital storytellers.</p>
-        </header>
+      <h2>Audio Showreel & Licenses</h2>
+      <div class="track-list">
+        <div class="track-item">
+          <div class="track-header">
+            <span class="track-title">Demo Reel A</span>
+            <span class="track-tag">Fantasy / RPG / Film Accent</span>
+          </div>
+          <audio controls src="audio/magickademoa.MP3"></audio>
+          <div class="store-buttons">
+            <a href="#" class="btn-store" target="_blank">Get Game Asset License (itch.io)</a>
+            <a href="#" class="btn-store" target="_blank">Get Media License (Bandcamp)</a>
+          </div>
+        </div>
+      </div>
 
-        <h2>Audio Showreel & Licenses</h2>
-        <div class="track-list">
-            <div class="track-item">
-                <div class="track-header">
-                    <span class="track-title">Demo Reel A</span>
-                    <span class="track-tag">Fantasy / RPG / Film Accent</span>
-                </div>
-                <audio controls src="audio/magickademoa.MP3"></audio>
-                <div class="store-buttons">
-                    <a href="#" class="btn-store" target="_blank">Get Game Asset License (itch.io)</a>
-                    <a href="#" class="btn-store" target="_blank">Get Media License (Bandcamp)</a>
-                </div>
-            </div>
+      <h2>Follow Our Journey</h2>
+      <!-- Modern Professional Social Badges Grid -->
+      <div class="social-links">
+        <a href="https://x.com" class="social-badge" target="_blank">X (Twitter)</a>
+        <a href="https://facebook.com" class="social-badge" target="_blank">Facebook</a>
+        <a href="#" class="social-badge" target="_blank">Spotify Profile</a>
+      </div>
+
+      <h2>Contact Us</h2>
+      <!-- Fixed Web3Forms endpoint handler route target -->
+      <form action="https://web3forms.com" method="POST">
+        <input type="hidden" name="access_key" value="b9e6bb3f-4b13-42f0-b4c2-4e007cef1688" />
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" required placeholder="Your name or studio" />
         </div>
 
-        <h2>Follow Our Journey</h2>
-        <div class="social-links">
-            <a href="https://x.com" target="_blank">X (Twitter)</a>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required placeholder="you@example.com" />
         </div>
 
-        <h2>Custom Scoring & Collaborations</h2>
-        <!-- Endpoint API action is fixed here -->
-        <form action="https://web3forms.com" method="POST">
-            <input type="hidden" name="access_key" value="b9e6bb3f-4b13-42f0-b4c2-4e007cef1688">
-            
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" required placeholder="Your name or studio">
+        <div class="form-group">
+          <label for="message">Project Brief</label>
+          <textarea name="message" id="message" rows="5" required placeholder="Tell us about your game, film, or licensing requirements..."></textarea>
+        </div>
 
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required placeholder="you@example.com">
-
-            <label for="message">Project Brief</label>
-            <textarea name="message" id="message" rows="5" required placeholder="Tell us about your project..."></textarea>
-
-            <button type="submit">Submit Request</button>
-        </form>
-
+        <button type="submit">Submit Request</button>
+      </form>
     </div>
-
-</body>
+  </body>
 </html>
