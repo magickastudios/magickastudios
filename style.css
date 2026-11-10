@@ -1,10 +1,10 @@
 :root {
-    --outer-bg: #c2ddf1;       /* Your perfectly selected light, soft sky blue background */
-    --reading-bg: #fefdfa;     /* Off-white page container canvas */
-    --text-main: #415579;      /* Brand dark slate blue for headings and elements */
-    --text-muted: #5e6f8f;     /* Mid-tone blue-grey for secondary paragraphs */
-    --input-bg: #f5f8fa;       /* Very soft, clean tinted gray-blue for the input boxes */
-    --border-light: #e4ebf2;   /* Soft internal container lines */
+    --outer-bg: #c2ddf1;       /* Soft sky blue background frame */
+    --reading-bg: #fefdfa;     /* Off-white inner page block canvas */
+    --text-main: #415579;      /* Brand dark slate blue */
+    --text-muted: #5e6f8f;     /* Brand medium blue-grey */
+    --input-bg: #f5f8fa;       /* Light tinted background for fields and tracks */
+    --border-light: #e4ebf2;   /* Soft divider accent lines */
 }
 
 body {
@@ -85,14 +85,14 @@ h2 {
     color: var(--text-main);
 }
 
+/* FIXED: Changed background to use your brand medium blue */
 .track-tag {
     font-size: 0.75rem;
-    background: var(--reading-bg);
-    color: var(--text-main);
-    padding: 4px 10px;
+    background-color: var(--text-muted);  /* Medium brand blue background */
+    color: var(--reading-bg);             /* Clean off-white text layout */
+    padding: 4px 12px;
     border-radius: 20px;
     font-weight: 600;
-    border: 1px solid var(--border-light);
 }
 
 audio {
@@ -125,7 +125,7 @@ audio {
     color: var(--reading-bg);
 }
 
-/* Social Icon Badges Container */
+/* Social Connections */
 .social-links {
     display: flex;
     flex-wrap: wrap;
@@ -136,7 +136,7 @@ audio {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px; /* Gap between icon and text */
+    gap: 8px;
     padding: 12px 24px;
     border-radius: 30px;
     background-color: var(--input-bg);
@@ -150,17 +150,13 @@ audio {
     min-width: 140px;
 }
 
-.social-badge i {
-    font-size: 1.1rem;
-}
-
 .social-badge:hover {
     background-color: var(--text-main);
     color: var(--reading-bg);
     border-color: var(--text-main);
 }
 
-/* Fixed Contrast Form Layout */
+/* Contact Setup Group styles */
 form {
     display: flex;
     flex-direction: column;
@@ -181,7 +177,6 @@ label {
     color: var(--text-main);
 }
 
-/* Switched inputs to a muted tint so they pop perfectly on a white canvas */
 input, textarea {
     background: var(--input-bg);
     border: 1px solid transparent;
